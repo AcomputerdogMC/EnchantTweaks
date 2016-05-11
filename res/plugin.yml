@@ -1,0 +1,5 @@
+name: EnchantTweaks
+version: 0.1.1
+description: Enchantment Tweaks
+author: acomputerdog
+main: net.acomputerdog.enchanttweaks.PluginEnchantTweaks
