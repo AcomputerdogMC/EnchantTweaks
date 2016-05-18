@@ -1,5 +1,17 @@
 name: EnchantTweaks
-version: 0.1.1
+version: 0.2.0
 description: Enchantment Tweaks
 author: acomputerdog
 main: net.acomputerdog.enchanttweaks.PluginEnchantTweaks
+
+commands:
+  unenchant:
+    description: Split enchantments off of an item
+    permission: enchanttweaks.unenchant
+    usage: Incorrect usage!  Use /unenchant
+    aliases: [enchantstrip, deenchant, stripenchant, stripenchants]
+
+permissions:
+  enchanttweaks.unenchant:
+    description: Use /unenchant
+    default: true
