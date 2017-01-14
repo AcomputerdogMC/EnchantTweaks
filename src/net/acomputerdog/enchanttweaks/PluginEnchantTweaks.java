@@ -5,6 +5,7 @@ import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.enchantments.EnchantmentOffer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -32,8 +33,9 @@ public class PluginEnchantTweaks extends JavaPlugin implements Listener {
     public void onPlaceInEnchantingTable(PrepareItemEnchantEvent e) {
         ItemStack item = e.getItem();
         if (item.getType() == Material.GLASS_BOTTLE) {
+            EnchantmentOffer[] offers = e.getOffers();
             for (int i = 0; i < 3; i++) {
-                e.getExpLevelCostsOffered()[i] = xpLevels[i]; //add 1, 5, and 10 as XP levels
+                offers[i].setCost(xpLevels[1]);//add 1, 5, and 10 as XP levels
             }
             e.setCancelled(false);
         }
