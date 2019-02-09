@@ -19,6 +19,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Map;
 
+/**
+ * Plugin main class
+ */
 public class PluginEnchantTweaks extends JavaPlugin implements Listener {
 
     private static final int[] xpLevels = {1, 5, 10};
@@ -48,7 +51,7 @@ public class PluginEnchantTweaks extends JavaPlugin implements Listener {
             Player enchanter = e.getEnchanter();
             int level = xpLevels[e.whichButton()];
             if (enchanter.getLevel() >= level) {
-                e.getItem().setType(Material.EXP_BOTTLE); //convert from glass to EXP bottles
+                e.getItem().setType(Material.EXPERIENCE_BOTTLE); //convert from glass to EXP bottles
                 e.getItem().setAmount(bottleCounts[e.whichButton()]); //set the amount of bottles
                 //TODO remove lapis, if it becomes possible at some point
 
