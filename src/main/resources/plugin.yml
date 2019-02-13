@@ -3,6 +3,7 @@ version: ${version}
 description: Enchantment Tweaks
 author: acomputerdog
 main: net.acomputerdog.enchanttweaks.PluginEnchantTweaks
+api-version: 1.13
 
 commands:
   unenchant:
